@@ -39,6 +39,9 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
             <a href="#partnerships" className="text-foreground hover:text-primary transition-colors">
               Partnerships
             </a>
+            <a href="#careers" className="text-foreground hover:text-primary transition-colors">
+              Careers
+            </a>
             <a href="#contact" className="text-foreground hover:text-primary transition-colors">
               Contact
             </a>
@@ -92,6 +95,9 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
               </a>
               <a href="#partnerships" className="block px-3 py-2 text-foreground hover:text-primary transition-colors">
                 Partnerships
+              </a>
+              <a href="#careers" className="block px-3 py-2 text-foreground hover:text-primary transition-colors">
+                Careers
               </a>
               <a href="#contact" className="block px-3 py-2 text-foreground hover:text-primary transition-colors">
                 Contact

@@ -4,7 +4,7 @@ import { MapPin, Phone, Mail, Facebook, Twitter, Linkedin, Instagram } from "luc
 import Image from "next/image"
 
 export default function Footer() {
-  const menuLinks = ["Overview", "Products", "Services", "Team", "Partnerships", "Contact"]
+  const menuLinks = ["Overview", "Products", "Services", "Team", "Partnerships", "Careers", "Contact"]
 
   const sectionMap: { [key: string]: string } = {
     "Products": "autoiq",
@@ -12,6 +12,7 @@ export default function Footer() {
     "Services": "services",
     "Team": "team",
     "Partnerships": "partnerships",
+    "Careers": "careers",
     "Contact": "contact"
   }
 

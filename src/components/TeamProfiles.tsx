@@ -23,7 +23,7 @@
         {
         name: "Ajay Basarur",
         role: "CEO & Co-Founder",
-        image: "/professional-ceo-headshot.png",
+        image: "/AjayBasarur.png",
         description: "Deep expertise in audio/video compression, established German subsidiary of PathPartner",
         detailedDescription:
             "Ajay Basarur is very passionate about solving problems through Digital Processing. He has deep knowledge of several audio and video compression and decompression algorithms. He was the first in the world to integrate 3D video decompression on Texas Instruments platforms for the global Television market. Apart from engineering, he held various positions in pre-sales, marketing and business development worldwide. He was instrumental in setting up German subsidiary of PathPartner (now part of KPIT Automotive). As Managing Director of European operations of PathPartner, he built the Automotive business from scratch and brought in several Fortune 500 companies as customers. He had led In-Cabin Radar sensing strategy and supported major Automotive Tier1s of Europe to bring \"Child & Pet sensing products for Car OEMs globally\". He is an Alumni of SJCE, Mysore and INSEAD BUSINESS SCHOOL, France.\n\nHe is an avid book reader and a regular sports player. During his free time, he plays Badminton and is undergoing training to play at a competitive level. He loves Roller Skating and Ice Skating",
@@ -34,7 +34,7 @@
         {
         name: "Radhesh Bhat",
         role: "CTO & Co-Founder",
-        image: "/professional-cto-headshot-technology-expert.jpg",
+        image: "/RadheshBhat.png",
         description: "20+ years in camera systems, AI, and digital video with multiple patents",
         detailedDescription:
             "Radhesh is a seasoned technology leader with over 20 years of expertise in digital camera systems, image processing, computer vision, deep learning, digital video codecs, camera tuning, image quality and embedded multimedia software. Before co-founding Emmetra, he played a pivotal role at PathPartner (now part of KPIT), where he established a new division dedicated to imaging and vision. This strategic move significantly expanded the company's capabilities, positioning PathPartner as one of top three players in the global imaging industry.\n\nRadhesh has extensive experience working with image signal processors (ISPs) from industry giants like Texas Instruments, Qualcomm, Broadcom etc. He has enabled to build cutting-edge camera products for leading brands, including Amazon, Meta, Motorola, GoPro, Mercedes Benz and has a proven track record in optimizing image quality to meet stringent industry standards. One of his key achievements was setting up a state-of-the-art Imaging Lab at PathPartner from scratch, which became a cornerstone of the company's technical strengths.\n\nHis work has earned him multiple patents in imaging technologies, and he has contributed significantly to the field through research publications in several international journals/conferences.\n\nRadhesh holds Bachelor's degree in electronics engineering from SDMCET, Dharwad. Outside of work, Radhesh enjoys playing tennis and cricket, reading, trekking, and staying up-to-date with the latest technology trends.\n\nNow, as CTO and co-founder of Emmetra, Radhesh continues to leverage his deep expertise to keep the company at the forefront of technological innovation.",
@@ -45,7 +45,7 @@
         {
         name: "Chethan KR",
         role: "VP, Corporate Development",
-        image: "/professional-vp-corporate-development-headshot.jpg",
+        image: "/ChethanKR.png",
         description: "Corporate development, M&A, strategic alliances expert",
         detailedDescription:
             "Chethan is a seasoned professional with over 25 years of experience in consumer electronics, multimedia systems and automotive hardware and software. He brings deep expertise in embedded software, digital television, set-top boxes, image processing, camera systems, electronic control unit (ECU) hardware and software.\n\nIn his previous role as Director at PathPartner (now a member of KPIT Group), he led a talented team of software engineers, delivering high-quality solutions and launching ECU and camera products for numerous automotive OEM's and consumer markets. His commitment to excellence has consistently driven successful outcomes.\n\nAs a founding member of his current venture, he is dedicated to building transformative technology solutions that create significant business value.\n\nHe holds a bachelor's degree in Computer Science and Engineering from Bangalore University and an MBA degree from Sikkim Manipal University. Outside of his professional pursuits, he enjoys playing badminton and exploring the great outdoors through trekking, reflecting his adventurous spirit.",
@@ -59,7 +59,7 @@
         {
         name: "Dave Tokic",
         role: "VP, Corporate Development",
-        image: "/professional-vp-corporate-development-headshot.jpg",
+        image: "/DaveTokic.png",
         description:
             "Senior technology executive with extensive experience in corporate development and strategic partnerships",
         detailedDescription:
@@ -71,7 +71,7 @@
         {
         name: "James Prior",
         role: "Technology Marketing Leader",
-        image: "/professional-technology-marketing-director-headsho.jpg",
+        image: "/JamesPrior.png",
         description:
             "Seasoned technology marketing leader with 20+ years of experience in semiconductor and edge-compute companies",
         detailedDescription:
@@ -83,7 +83,7 @@
         {
         name: "Dr. Prasad S Murthy",
         role: "AI Scientist & Researcher",
-        image: "/professional-ai-scientist-researcher-headshot.jpg",
+        image: "/Dr.PrasadSMurthy.png",
         description:
             "Leading AI scientist in healthcare with 27 patents and 35+ publications across top-tier journals",
         detailedDescription:

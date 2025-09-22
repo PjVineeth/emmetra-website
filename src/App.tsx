@@ -11,6 +11,7 @@ import Services from "./components/Services"
 import TeamProfiles from "@/components/TeamProfiles"
 import Partnership from "./components/Partnership"
 import ImageQualityLab from "./components/ImageQualityLab"
+import IndustrySegments from "./components/IndustrySegments"
 import CallToAction from "./components/CallToAction"
 import Careers from "./components/Careers"
 import Contact from "./components/Contact"
@@ -35,6 +36,7 @@ function App() {
         <ProductFeatures />
         <Services />
         <ImageQualityLab />
+        <IndustrySegments />
         <Partnership />
         {/* <CallToAction /> */}
         <Careers />
