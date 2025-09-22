@@ -1,28 +1,21 @@
 import type React from "react"
 import { ArrowRight, Play, Zap, Camera, Cpu } from "lucide-react"
-import LiquidEther from "./LiquidEther"
+import DotGrid from "./DotGrid"
 
 const Hero: React.FC = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-black">
-      {/* Dynamic Background */}
       <div className="absolute inset-0">
-        <LiquidEther
-          colors={[ '#4E2DD2', '#7B79D7', '#7C68C0' ]}
-          mouseForce={20}
-          cursorSize={100}
-          isViscous={false}
-          viscous={30}
-          iterationsViscous={32}
-          iterationsPoisson={32}
-          resolution={0.5}
-          isBounce={false}
-          autoDemo={true}
-          autoSpeed={1}
-          autoIntensity={3.0}
-          takeoverDuration={0.1}
-          autoResumeDelay={0}
-          autoRampDuration={0.6}
+        <DotGrid
+          dotSize={1}
+          gap={10}
+          baseColor="#e24d35"
+          activeColor="#5227FF"
+          proximity={90}
+          shockRadius={500}
+          shockStrength={5}
+          resistance={750}
+          returnDuration={1}
         />
       </div>
 

@@ -4,7 +4,6 @@ import { useState } from "react"
 import "./App.css"
 import Header from "./components/Header"
 import Hero from "./components/Hero"
-import ProblemSolution from "./components/ProblemSolution"
 import ProductFeatures from "./components/ProductFeatures"
 import CompanyOverview from "./components/CompanyOverview"
 import Services from "./components/Services"
@@ -12,7 +11,6 @@ import TeamProfiles from "@/components/TeamProfiles"
 import Partnership from "./components/Partnership"
 import ImageQualityLab from "./components/ImageQualityLab"
 import IndustrySegments from "./components/IndustrySegments"
-import CallToAction from "./components/CallToAction"
 import Careers from "./components/Careers"
 import Contact from "./components/Contact"
 import Footer from "./components/Footer"
@@ -30,7 +28,6 @@ function App() {
       <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <main>
         <Hero />
-        {/* <ProblemSolution /> */}
         <CompanyOverview />
         <TeamProfiles />
         <ProductFeatures />
@@ -38,7 +35,6 @@ function App() {
         <ImageQualityLab />
         <IndustrySegments />
         <Partnership />
-        {/* <CallToAction /> */}
         <Careers />
         <Contact />
         <Footer />
