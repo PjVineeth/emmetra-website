@@ -4,16 +4,16 @@ import { MapPin, Phone, Mail, Facebook, Twitter, Linkedin, Instagram } from "luc
 import Image from "next/image"
 
 export default function Footer() {
-  const menuLinks = ["Overview", "Products", "Services", "Team", "Partnerships", "Careers", "Contact"]
+  const menuLinks = ["Overview", "Team", "Product", "Services", "Partnerships", "Careers", "Contact Us"]
 
   const sectionMap: { [key: string]: string } = {
-    "Products": "autoiq",
     "Overview": "company-overview",
-    "Services": "services",
     "Team": "team",
+    "Product": "autoiq",
+    "Services": "services",
     "Partnerships": "partnerships",
     "Careers": "careers",
-    "Contact": "contact"
+    "Contact Us": "contact"
   }
 
   const handleMenuClick = (link: string) => {

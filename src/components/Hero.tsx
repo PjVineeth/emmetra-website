@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
           {/* Badge */}
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 text-white mb-8 animate-fade-in shadow-lg">
             <Zap className="w-4 h-4 mr-2" />
-            <span className="text-sm font-medium">Shaping the Future of Camera With AI</span>
+            <span className="text-sm font-medium">Shaping the Future of Image With AI</span>
           </div>
 
           {/* Main Headline */}
@@ -80,7 +80,7 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-blue-300 dark:border-blue-400 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-blue-500 dark:bg-blue-400 rounded-full mt-2 animate-pulse"></div>
         </div>

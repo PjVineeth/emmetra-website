@@ -122,4 +122,22 @@
   body {
     @apply bg-background text-foreground;
   }
+  /* Ensure anchored sections are not hidden behind the sticky header */
+  section[id] {
+    scroll-margin-top: 6rem;
+  }
+  @media (min-width: 768px) {
+    section[id] {
+      scroll-margin-top: 7rem;
+    }
+  }
+
+  /* Mobile defaults: center images for uniformity */
+  @media (max-width: 640px) {
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }

@@ -22,13 +22,13 @@
     if (!isOpen || !member) return null
 
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
-        <div className="bg-white rounded-2xl  w-[1200px] max-h-[90vh] overflow-hidden shadow-2xl">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/40 backdrop-blur-sm">
+        <div className="bg-white rounded-2xl w-[100vw] sm:w-full max-w-5xl h-[95vh] overflow-hidden shadow-2xl">
             {/* Header */}
-            <div className="flex justify-end items-center p-6 border-b border-gray-200">
+            <div className="sticky top-0 z-10 flex justify-end items-center p-4 sm:p-6 border-b border-gray-200 bg-white/70 backdrop-blur supports-[backdrop-filter]:bg-white/70">
             <button
                 onClick={onClose}
-                className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+                className="p-2 rounded-full bg-white/70 hover:bg-white/90 transition-colors border border-gray-200"
                 aria-label="Close modal"
             >
                 <X className="w-6 h-6" />
@@ -36,10 +36,10 @@
             </div>
 
             {/* Content */}
-            <div className="flex flex-col lg:flex-row">
+            <div className="flex flex-col lg:flex-row overflow-y-auto max-h-[calc(95vh-4rem)]">
 
             {/* Content Section */}
-            <div className="p-6 flex flex-col justify-center">
+            <div className="p-4 sm:p-6 flex flex-col justify-center">
                 <div className="space-y-6">
                 {/* Name and Role */}
                 <div>

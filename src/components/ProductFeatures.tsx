@@ -18,8 +18,8 @@ const ProductFeatures: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // TODO: replace with real submit action (API/email)
-    console.log("Demo Request Submitted", demoForm)
+    // Temporary UX: success toast only
+    import('sonner').then(({ toast }) => toast.success('Demo request submitted!'))
     setIsDemoOpen(false)
   }
 
@@ -67,7 +67,7 @@ const ProductFeatures: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary mb-6">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 text-white mb-6">
             <Bot className="w-4 h-4 mr-2" />
             <span className="text-sm font-medium">AutoIQ.ai Platform</span>
           </div>
@@ -123,8 +123,8 @@ const ProductFeatures: React.FC = () => {
         {/* Technology Showcase */}
         <div className="bg-card rounded-2xl p-8 lg:p-12 border border-border">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary mb-6">
+            <div className="text-center lg:text-left">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 text-white mb-6">
                 <Zap className="w-4 h-4 mr-2" />
                 <span className="text-sm font-medium">Advanced AI Technology</span>
               </div>
@@ -180,13 +180,13 @@ const ProductFeatures: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={() => setIsDemoOpen(true)}
-              className="bg-black dark:bg-white text-white dark:text-black px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-blue-800 transition-all duration-300 flex items-center shadow-lg"
+              className="bg-black dark:bg-white text-white dark:text-black px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center w-full sm:w-auto text-center shadow-lg"
             >
               Request Demo
             </button>
             <button
               onClick={() => setIsDocsOpen(true)}
-              className="border border-border text-foreground px-8 py-3 rounded-lg font-semibold hover:bg-muted transition-colors"
+              className="border border-border text-foreground px-8 py-3 rounded-lg font-semibold hover:bg-muted transition-colors w-full sm:w-auto text-center"
             >
               View Documentation
             </button>
@@ -196,19 +196,19 @@ const ProductFeatures: React.FC = () => {
     </section>
     {/* Demo Request Modal */}
     {isDemoOpen && (
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="bg-card rounded-2xl w-full max-w-2xl border border-border shadow-2xl overflow-hidden">
-          <div className="flex items-center justify-between p-6 border-b border-border">
+      <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div className="bg-card rounded-2xl w-[100vw] sm:w-full max-w-[720px] h-[95vh] sm:h-auto border border-border shadow-2xl overflow-hidden">
+          <div className="sticky top-0 z-10 flex items-center justify-between p-4 sm:p-6 border-b border-border backdrop-blur supports-[backdrop-filter]:bg-background/60">
             <h4 className="text-xl font-bold">Book a Free Demo</h4>
             <button
               aria-label="Close modal"
               onClick={() => setIsDemoOpen(false)}
-              className="p-2 rounded-md hover:bg-muted transition-colors"
+              className="p-2 rounded-full bg-white/60 dark:bg-black/40 hover:bg-white/80 dark:hover:bg-black/60 transition-colors border border-border"
             >
               ✕
             </button>
           </div>
-          <form onSubmit={handleSubmit} className="p-6 space-y-5">
+          <form onSubmit={handleSubmit} className="p-4 sm:p-6 space-y-5 overflow-y-auto max-h-[calc(95vh-4rem)]">
             <div>
               <label className="block text-sm font-medium mb-2" htmlFor="name">Name <span className="text-red-500">*</span></label>
               <input id="name" name="name" value={demoForm.name} onChange={handleChange} required className="w-full rounded-lg border border-border bg-background px-4 py-3 outline-none focus:ring-2 focus:ring-primary" />
@@ -235,34 +235,61 @@ const ProductFeatures: React.FC = () => {
 
     {/* Documentation Modal */}
     {isDocsOpen && (
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="bg-card rounded-2xl w-full max-w-3xl border border-border shadow-2xl overflow-hidden">
-          <div className="flex items-center justify-between p-6 border-b border-border">
+      <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div className="bg-card rounded-2xl w-[100vw] sm:w-full max-w-[900px] h-[95vh] sm:h-auto border border-border shadow-2xl overflow-hidden">
+          <div className="sticky top-0 z-10 flex items-center justify-between p-4 sm:p-6 border-b border-border backdrop-blur supports-[backdrop-filter]:bg-background/60">
             <h4 className="text-xl font-bold">AutoIQ.ai Documentation</h4>
             <button
               aria-label="Close modal"
               onClick={() => setIsDocsOpen(false)}
-              className="p-2 rounded-md hover:bg-muted transition-colors"
+              className="p-2 rounded-full bg-white/60 dark:bg-black/40 hover:bg-white/80 dark:hover:bg-black/60 transition-colors border border-border"
             >
               ✕
             </button>
           </div>
-          <div className="p-6 space-y-4">
-            <p className="text-muted-foreground">
-              AutoIQ.ai is Emmetra’s AI-powered image quality platform that accelerates camera development by
-              automatically tuning ISP parameters and optimizing end-to-end pipelines. It integrates with your SoC
-              stack, supports sensor and lens variations, and provides dynamic ISP configuration via a control layer.
-            </p>
-            <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-              <li>Automated IQ tuning with data-driven algorithms and simulation support</li>
-              <li>Hardware stack adaptation across sensors, lenses, and ISPs</li>
-              <li>API-managed control software with parameter parsing on-device</li>
-              <li>Offline and in-field calibration workflows for rapid iteration</li>
-            </ul>
-            <p className="text-muted-foreground">
-              Use AutoIQ.ai to reduce manual iteration, standardize image quality across scenes, and reach
-              production-ready tuning faster.
-            </p>
+          <div className="p-4 sm:p-6 space-y-6 overflow-y-auto max-h-[calc(95vh-4rem)]">
+            <div>
+              <h5 className="text-base sm:text-lg font-semibold text-foreground mb-2">AUTOIQ.ai Overview</h5>
+              <p className="text-sm sm:text-base text-muted-foreground">
+                AUTOIQ.ai is an advanced Agentic AI tool that automates camera image quality (IQ) tuning for both
+                Human Vision (HV) and Machine Vision (MV) applications. It reduces tuning time from months to days,
+                enabling rapid prototyping, easier deployment, and greater flexibility in selecting image sensors and
+                lenses.
+              </p>
+            </div>
+
+            <div>
+              <h5 className="text-base sm:text-lg font-semibold text-foreground mb-2">Key Features</h5>
+              <ul className="list-disc pl-5 sm:pl-6 space-y-2 text-sm sm:text-base text-muted-foreground">
+                <li><span className="font-medium text-foreground">AI Automated Tuning</span>: Automatically sets and optimizes IQ metrics across use cases—eliminates trial-and-error and manual tuning.</li>
+                <li><span className="font-medium text-foreground">Model Optimization</span>: Enhances model size and performance for different machine vision applications without retraining.</li>
+                <li><span className="font-medium text-foreground">Sensor and Lens Agnostic</span>: Broad compatibility with many sensors and lens combinations.</li>
+                <li><span className="font-medium text-foreground">Cloud-Based Interface</span>: Simple workflows, real-time feedback, and cloud access for tuning.</li>
+                <li><span className="font-medium text-foreground">Gamified UX</span>: Scoring-based UI that’s accessible to both experts and non‑experts.</li>
+                <li><span className="font-medium text-foreground">Fine-Tuning for Color Philosophy</span>: Customize output to match your organization’s color preferences.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h5 className="text-base sm:text-lg font-semibold text-foreground mb-2">Supported Platforms</h5>
+              <p className="text-sm sm:text-base text-muted-foreground">
+                Primary support targets the Renesas RZ/V2L MPU Evaluation Kit (with DRP‑AI accelerator, Arm Cortex‑A55
+                CPU, and advanced graphics/video codec). Expansion to additional RZ/V MPU series devices is in progress.
+              </p>
+            </div>
+
+            <div>
+              <h5 className="text-base sm:text-lg font-semibold text-foreground mb-2">Typical Use Cases</h5>
+              <ul className="list-disc pl-5 sm:pl-6 space-y-2 text-sm sm:text-base text-muted-foreground">
+                <li>Robotics and Industrial Automation</li>
+                <li>Wearables and Medical Imaging</li>
+                <li>Smart Cities and IoT</li>
+                <li>Drones, Security, and Surveillance</li>
+                <li>Smart Home and Retail</li>
+                <li>AR Glasses and VR Headsets</li>
+                <li>Automotive and Embedded Vision Modules</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

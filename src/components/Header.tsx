@@ -27,14 +27,14 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
             <a href="#company-overview" className="text-foreground hover:text-primary transition-colors">
               Overview
             </a>
+            <a href="#team" className="text-foreground hover:text-primary transition-colors">
+              Team
+            </a>
             <a href="#autoiq" className="text-foreground hover:text-primary transition-colors">
-              Products
+              Product
             </a>
             <a href="#services" className="text-foreground hover:text-primary transition-colors">
               Services
-            </a>
-            <a href="#team" className="text-foreground hover:text-primary transition-colors">
-              Team
             </a>
             <a href="#partnerships" className="text-foreground hover:text-primary transition-colors">
               Partnerships
@@ -43,7 +43,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
               Careers
             </a>
             <a href="#contact" className="text-foreground hover:text-primary transition-colors">
-              Contact
+              Contact Us
             </a>
           </nav>
 
@@ -81,26 +81,26 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-border">
-              <a href="#company-overview" className="block px-3 py-2 text-foreground hover:text-primary transition-colors">
+              <a onClick={() => setIsMenuOpen(false)} href="#company-overview" className="block px-3 py-3 text-base text-foreground hover:text-primary transition-colors">
                 Overview
               </a>
-              <a href="#autoiq" className="block px-3 py-2 text-foreground hover:text-primary transition-colors">
-                Products
-              </a>
-              <a href="#services" className="block px-3 py-2 text-foreground hover:text-primary transition-colors">
-                Services
-              </a>
-              <a href="#team" className="block px-3 py-2 text-foreground hover:text-primary transition-colors">
+              <a onClick={() => setIsMenuOpen(false)} href="#team" className="block px-3 py-3 text-base text-foreground hover:text-primary transition-colors">
                 Team
               </a>
-              <a href="#partnerships" className="block px-3 py-2 text-foreground hover:text-primary transition-colors">
+              <a onClick={() => setIsMenuOpen(false)} href="#autoiq" className="block px-3 py-3 text-base text-foreground hover:text-primary transition-colors">
+                Product
+              </a>
+              <a onClick={() => setIsMenuOpen(false)} href="#services" className="block px-3 py-3 text-base text-foreground hover:text-primary transition-colors">
+                Services
+              </a>
+              <a onClick={() => setIsMenuOpen(false)} href="#partnerships" className="block px-3 py-3 text-base text-foreground hover:text-primary transition-colors">
                 Partnerships
               </a>
-              <a href="#careers" className="block px-3 py-2 text-foreground hover:text-primary transition-colors">
+              <a onClick={() => setIsMenuOpen(false)} href="#careers" className="block px-3 py-3 text-base text-foreground hover:text-primary transition-colors">
                 Careers
               </a>
-              <a href="#contact" className="block px-3 py-2 text-foreground hover:text-primary transition-colors">
-                Contact
+              <a onClick={() => setIsMenuOpen(false)} href="#contact" className="block px-3 py-3 text-base text-foreground hover:text-primary transition-colors">
+                Contact Us
               </a>
             </div>
           </div>

@@ -25,7 +25,7 @@ const Partnership: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary mb-6">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 text-white mb-6">
             <Users className="w-4 h-4 mr-2" />
             <span className="text-sm font-medium">Strategic Partnerships</span>
           </div>
@@ -99,21 +99,21 @@ const Partnership: React.FC = () => {
 
             <div className="relative">
               {/* Technology Visualization */}
-              <div className="relative bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl p-8 border border-primary/20">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-xl"></div>
+              <div className="relative bg-gradient-to-br from-blue-500/10 to-indigo-500/10 rounded-xl p-8 border border-blue-500/20">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-indigo-500/5 rounded-xl"></div>
                 <div className="relative">
                   {/* Chip Visualization */}
                   <div className="bg-card rounded-lg p-6 border border-border mb-6">
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-sm font-medium text-foreground">RZ/V2L MPU</span>
-                      <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                      <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
                     </div>
                     <div className="grid grid-cols-2 gap-4">
-                      <div className="bg-primary/20 rounded p-3 text-center">
+                      <div className="bg-blue-500/10 rounded p-3 text-center">
                         <div className="text-xs text-muted-foreground mb-1">DRP-AI</div>
                         <div className="text-sm font-semibold text-foreground">Active</div>
         </div>
-                      <div className="bg-secondary/20 rounded p-3 text-center">
+                      <div className="bg-blue-500/10 rounded p-3 text-center">
                         <div className="text-xs text-muted-foreground mb-1">Cortex-A55</div>
                         <div className="text-sm font-semibold text-foreground">Dual Core</div>
           </div>

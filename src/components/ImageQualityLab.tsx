@@ -9,7 +9,7 @@ const ImageQualityLab: React.FC = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div>
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 mb-6">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 mb-6">
               <Microscope className="w-4 h-4 mr-2" />
               <span className="text-sm font-medium">Image Quality Lab</span>
             </div>
@@ -23,8 +23,8 @@ const ImageQualityLab: React.FC = () => {
 
             {/* Location */}
             <div className="flex items-center space-x-3 mb-8">
-              <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
-                <MapPin className="w-6 h-6 text-green-600 dark:text-green-400" />
+              <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center">
+                <MapPin className="w-6 h-6 text-blue-600 dark:text-blue-400" />
               </div>
               <div>
                 <h3 className="font-semibold text-foreground">Frankfurt am Main, Germany</h3>
@@ -71,15 +71,15 @@ const ImageQualityLab: React.FC = () => {
 
           {/* Visual */}
           <div className="relative">
-            <div className="relative bg-gradient-to-br from-green-500/10 to-teal-500/10 rounded-2xl p-8 border border-green-500/20">
-              <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-teal-500/5 rounded-2xl"></div>
+            <div className="relative bg-gradient-to-br from-blue-500/10 to-indigo-500/10 rounded-2xl p-8 border border-blue-500/20">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-indigo-500/5 rounded-2xl"></div>
 
               {/* Lab Equipment Visualization */}
               <div className="relative">
                 <div className="grid grid-cols-2 gap-6 mb-8">
                   <div className="bg-card rounded-lg p-6 border border-border text-center">
-                    <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Microscope className="w-6 h-6 text-green-600 dark:text-green-400" />
+                    <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Microscope className="w-6 h-6 text-blue-600 dark:text-blue-400" />
                     </div>
                     <h4 className="font-semibold text-foreground mb-2">Precision Equipment</h4>
                     <p className="text-xs text-muted-foreground">State-of-the-art testing tools</p>
@@ -97,7 +97,7 @@ const ImageQualityLab: React.FC = () => {
                 <div className="bg-card rounded-lg p-6 border border-border">
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-sm font-medium text-foreground">Lab Capabilities</span>
-                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                    <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
                   </div>
                   <div className="grid grid-cols-3 gap-4 text-center">
                     <div>

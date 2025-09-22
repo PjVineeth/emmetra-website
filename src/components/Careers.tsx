@@ -1,17 +1,21 @@
 import React from "react"
+import { toast } from "sonner"
 import { Briefcase, TrendingUp, Heart, Globe, ArrowRight } from "lucide-react"
 
 const Careers: React.FC = () => {
   const [isOpen, setIsOpen] = React.useState(false)
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    const formData = new FormData(e.currentTarget)
-    // For now, just log the values. Wire to backend/email later.
-    // eslint-disable-next-line no-console
-    console.log("Career application submitted", Object.fromEntries(formData.entries()))
+    const formEl = e.currentTarget
+    const formData = new FormData(formEl)
+    // Ignore file upload and API; just show toast
+    formData.delete('resume')
+    await new Promise((r) => setTimeout(r, 400))
+    toast.success('Application submitted!')
+    // reset before closing (unmount) to avoid null refs
+    formEl.reset()
     setIsOpen(false)
-    e.currentTarget.reset()
   }
 
   return (

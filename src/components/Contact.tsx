@@ -3,6 +3,7 @@
     import type React from "react"
 
     import { useState } from "react"
+    import { toast } from "sonner"
     import { Send, Mail } from "lucide-react"
 
     export default function Contact() {
@@ -39,45 +40,17 @@
         // Reset form status
         setFormStatus({ loading: true, success: false, error: "" })
 
-        try {
-        const response = await fetch('/api/contact', {
-            method: 'POST',
-            headers: {
-            'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-            name: formData.name,
-            email: formData.email,
-            subject: formData.subject,
-            message: formData.message,
-            }),
-        })
-
-        const data = await response.json()
-
-        if (response.ok) {
-            setFormStatus({ loading: false, success: true, error: "" })
-            // Reset form data
-            setFormData({
-            name: "",
-            email: "",
-            subject: "",
-            message: "",
-            agreeToTerms: false,
-            })
-        } else {
-            setFormStatus({ loading: false, success: false, error: data.error || "Failed to send message" })
-        }
-        } catch (error) {
-        console.error('Error submitting form:', error)
-        setFormStatus({ loading: false, success: false, error: "Network error. Please try again." })
-        }
+        // For now: no API call. Just show success toast and reset.
+        await new Promise((r) => setTimeout(r, 400))
+        setFormStatus({ loading: false, success: true, error: "" })
+        toast.success("Thanks! Your message has been sent.")
+        setFormData({ name: "", email: "", subject: "", message: "", agreeToTerms: false })
     }
 
     return (
         <section id="contact" className="bg-white dark:bg-black py-16">
         <div className="text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary mb-6">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 text-white mb-6">
                 <Mail className="w-4 h-4 mr-2" />
                 <span className="text-sm font-medium">Contact us</span>
             </div>
@@ -196,7 +169,7 @@
                     className={`w-full px-8 py-4 rounded-lg text-lg font-medium transition-colors inline-flex items-center justify-center gap-2 ${
                     formStatus.loading 
                         ? 'bg-gray-400 cursor-not-allowed' 
-                        : 'dark:bg-white bg-black hover:bg-blue-700'
+                        : 'dark:bg-white bg-black'
                     } text-white dark:text-black`}
                 >
                     {formStatus.loading ? 'Sending...' : 'Submit'}
@@ -206,7 +179,7 @@
             </div>
 
             {/* Illustration */}
-            <div className="relative h-full">
+            <div className="relative h-full hidden lg:block">
                 <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-700 dark:to-purple-900 rounded-2xl p-8 h-full">
                 <div className="relative h-full">
                     {/* Person illustration */}
@@ -228,7 +201,7 @@
                     {/* Floating elements */}
                     <div className="absolute top-16 left-8 w-8 h-8 bg-purple-400 rounded-full opacity-30 animate-bounce"></div>
                     <div className="absolute bottom-24 right-16 w-6 h-6 bg-blue-400 rounded-full opacity-40 animate-pulse"></div>
-                </div>
+                </div>  
                 </div>
             </div>
             </div>
