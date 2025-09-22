@@ -1,17 +1,29 @@
 import type React from "react"
 import { ArrowRight, Play, Zap, Camera, Cpu } from "lucide-react"
+import LiquidEther from "./LiquidEther"
 
 const Hero: React.FC = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-black">
-      {/* Background Gradient - Removed for white background */}
-
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-20 w-32 h-32 border border-blue-200 dark:border-blue-200 rounded-full"></div>
-        <div className="absolute top-40 right-32 w-24 h-24 border border-blue-200 dark:border-blue-400 rounded-full"></div>
-        <div className="absolute bottom-32 left-32 w-40 h-40 border border-blue-200 dark:border-blue-400 rounded-full"></div>
-        <div className="absolute bottom-20 right-20 w-28 h-28 border border-blue-200 dark:border-blue-400 rounded-full"></div>
+      {/* Dynamic Background */}
+      <div className="absolute inset-0">
+        <LiquidEther
+          colors={[ '#4E2DD2', '#7B79D7', '#7C68C0' ]}
+          mouseForce={20}
+          cursorSize={100}
+          isViscous={false}
+          viscous={30}
+          iterationsViscous={32}
+          iterationsPoisson={32}
+          resolution={0.5}
+          isBounce={false}
+          autoDemo={true}
+          autoSpeed={1}
+          autoIntensity={3.0}
+          takeoverDuration={0.1}
+          autoResumeDelay={0}
+          autoRampDuration={0.6}
+        />
       </div>
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -46,10 +58,10 @@ const Hero: React.FC = () => {
               Schedule Demo
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
-            <button className="group bg-transparent border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300 flex items-center">
+            {/* <button className="group bg-transparent border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300 flex items-center">
               <Play className="mr-2 w-5 h-5" />
               Watch Demo
-            </button>
+            </button> */}
           </div>
 
           {/* Feature Icons */}
