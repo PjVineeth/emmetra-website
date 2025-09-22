@@ -1,0 +1,21 @@
+# Ignore local dev and build caches
+node_modules
+.next/cache
+.vercel
+
+# Vite artifacts if any
+vite-dist
+dist
+
+# Logs and OS files
+*.log
+.DS_Store
+
+# Editor folders
+.vscode
+.idea
+
+# Test and misc
+coverage
+**/__tests__
+**/__mocks__
