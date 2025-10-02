@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
         <DotGrid
           dotSize={1}
           gap={10}
-          baseColor="#e24d35"
+          baseColor="#0039b8"
           activeColor="#5227FF"
           proximity={90}
           shockRadius={500}
